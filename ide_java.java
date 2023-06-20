@@ -15,7 +15,7 @@ class
 	public static void main(String[] args) 
 	{
 		MainframeScanner ms=new MainframeScanner();
-		PrintWriter pw=new PrintWriter(System.out);
+		PrintWriter pw=new PrintWriter(System.out,true);
 		int t=ms.nextInt();
 		while(t-->0)
 		{
@@ -75,7 +75,7 @@ class
 	static int getIndexOfCeil(int x[],int t)
 	{
 	    int temp=getCeil(x,t);
-	    return BinarySearch(x,temp);
+	    return BinarySearchRec(x,0,x.length-1,temp);
 	}
 	static int getPeakElement(int x[])
 	{
@@ -273,36 +273,6 @@ class
 	    }
 	    return -1;
 	}
-    static int BinarySearch(int[] x,int t)
-    {
-        int l=0,r=x.length-1,mid;
-        while(l<=r)
-        {
-            mid=l+(r-l)/2;
-            if(x[mid]==t)
-                return mid;
-            if(x[mid]>t)
-                r=mid-1;
-            else    
-                l=mid+1;
-        }
-        return -1;
-    }
-    static int BinarySearchDesc(int[] x,int t)
-    {
-        int l=0,r=x.length-1,mid;
-        while(l<=r)
-        {
-            mid=l+(r-l)/2;
-            if(x[mid]==t)
-                return mid;
-            if(x[mid]>t)
-                l=mid+1;
-            else    
-                r=mid-1;
-        }
-        return -1;
-    }
     static long[] prefixSum(int x[])
     {
         long psum[]=new long[x.length];
@@ -347,16 +317,6 @@ class
     }
 	static final Random random=new Random();
 	static final int mod=1_000_000_007;
-	static void ruffleSort(int[] a) 
-	{
-		int n=a.length;//shuffle, then sort 
-		for (int i=0; i<n; i++) 
-		{
-			int oi=random.nextInt(n), temp=a[oi];
-			a[oi]=a[i]; a[i]=temp;
-		}
-		Arrays.sort(a);
-	}
 	static long add(long a, long b) 
 	{
 		return (a+b)%mod;
@@ -371,10 +331,9 @@ class
 	}
 	static long exp(long base, long exp) 
 	{
-		if (exp==0) return 1;
-		long half=exp(base, exp/2);
-		if (exp%2==0) return mul(half, half);
-		return mul(half, mul(half, base));
+		if (exp==0) 
+		    return 1;
+		return (exp%2==0?exp(base*base,exp/2):base*exp(base*base,exp/2));
 	}
 	static long[] factorials=new long[2_000_001];
 	static long[] invFactorials=new long[2_000_001];
