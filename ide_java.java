@@ -20,7 +20,7 @@ class
 		while(t-->0)
 		{
 		    int n=ms.nextInt();
-		    
+		    /*Your code goes here*/
 		}
 		pw.close();
 	}
