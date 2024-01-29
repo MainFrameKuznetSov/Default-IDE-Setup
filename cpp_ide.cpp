@@ -49,11 +49,22 @@ vector<int> getSieve(int n)
     }
     return getPrime;
 }
+long long exp(int a,int b)
+{
+    if(b==0)
+        return 1;
+    if(b==1)
+        return a;
+    if(b%2==0)
+        return exp(a,b/2)*exp(a,b/2);
+    else
+        return a*exp(a*a,(b-1)/2);
+}
 void solve()
 {
-        int n;
-        cin>>n;
-        /*Your Code starts here*/
+    /*Your Code starts here*/
+    int n;
+    cin>>n;
 }
 int main() 
 {
