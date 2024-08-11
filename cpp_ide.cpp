@@ -16,6 +16,8 @@
 #define vi vector<int>
 #define vll vector<long long>
 #define vpii vector<pair<int,int>>
+#define vsi vector<set<int>>
+#define vvi vector<vi>
 using namespace std;
 int BinarySearch(vi x,int t)
 {
