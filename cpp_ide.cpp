@@ -18,6 +18,7 @@
 #define vpii vector<pair<int,int>>
 #define vsi vector<set<int>>
 #define vvi vector<vi>
+#define vb vector<bool>
 using namespace std;
 int BinarySearch(vi x,int t)
 {
@@ -38,7 +39,27 @@ int BinarySearch(vi x,int t)
     }
     return -1;
 }
-long long exp(int a,int b)
+vi seive(int n)
+{
+    vb check(n+1,true);
+    check[0]=check[1]=false;
+    for(int p=2;p*p<=n;++p) 
+    {
+        if(check[p]) 
+        {
+            jloop(i,p*p,n,p)
+                check[i]=false;
+        }   
+    }
+    vi prime;
+    lloop(i,2,n)
+    {
+        if(check[i])
+            prime.pb(i);
+    }
+    return prime;
+}
+ll exp(int a,int b)
 {
     if(b==0)
         return 1;
