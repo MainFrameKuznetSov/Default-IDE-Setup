@@ -20,6 +20,7 @@
 #define vsi vector<set<int>>
 #define vvi vector<vi>
 #define vb vector<bool>
+#define umii unordered_map<int,int>
 using namespace std;
 int BinarySearch(vi x,int t)
 {
