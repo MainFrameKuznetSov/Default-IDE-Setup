@@ -7,6 +7,7 @@
 #define S second
 #define all(v) (v).begin(),(v).end()
 #define rall(v) (v).rbegin(),(v).rend()
+#define itrep(var) for(auto iter:var)
 #define rep(i,n) for(int i=0;i<n;++i)
 #define rrep(i,n) for(int i=n;i>=0;--i)
 #define lloop(i,a,b) for(int i=a;i<=b;++i)
