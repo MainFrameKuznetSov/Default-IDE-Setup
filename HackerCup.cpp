@@ -90,34 +90,23 @@ ll selfPower(ll x,ll y,ll p)
 void solve(int t,ifstream &file,ofstream &outfile)
 {
     //Your Code starts here
-    ll n,k;
-    file>>n>>k;
-    vll v(n);
-    ll mn=INT_MAX;
-    rep(i,n)
-    {
-        file>>v[i];
-	mn=min(mn,v[i]);
-    }
-    //sort(all(v));
-    ll sum=mn*(2*n-3);
-    if(n==1)
-        sum=v[0];
-    //cout<<sum<<"\n";
-    outfile<<"Case #"<<t<<": "<<(sum<=k?"YES\n":"NO\n");
+    int n;
+    file>>n;
 }
 int main() 
 {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
 	cout.tie(0);
-	ifstream file("walk_the_line_input.txt");
+	string inp="";//name of input file
+	string opt="";//name of output file
+	ifstream file(inp);
 	if(!file)
 	{
 	    cerr<<"Error opening file!\n";
 	    return 1;
 	}
-	ofstream outfile("output.txt");
+	ofstream outfile(opt);
 	if(!outfile)
 	{
 	    cerr<<"Error opening file!\n";
