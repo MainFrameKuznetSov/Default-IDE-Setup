@@ -9,7 +9,7 @@
 #define rall(v) (v).rbegin(),(v).rend()
 #define itrep(mp) for(auto iter:mp)
 #define rep(i,n) for(int i=0;i<n;++i)
-#define rrep(i,n) for(int i=n;i>=0;--i)
+#define rrep(i,n) for(int i=n-1;i>=0;--i)
 #define lloop(i,a,b) for(int i=a;i<=b;++i)
 #define jloop(i,a,b,k) for(int i=a;i<=b;i+=k)
 #define nlloop(i,a,b) for(int i=a;i>=b;--i)
