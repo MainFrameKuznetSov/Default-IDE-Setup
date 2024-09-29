@@ -7,7 +7,6 @@
 #define S second
 #define all(v) (v).begin(),(v).end()
 #define rall(v) (v).rbegin(),(v).rend()
-#define itrep(mp) for(auto iter:mp)
 #define rep(i,n) for(int i=0;i<n;++i)
 #define rrep(i,n) for(int i=n-1;i>=0;--i)
 #define lloop(i,a,b) for(int i=a;i<=b;++i)
@@ -16,8 +15,10 @@
 #define njloop(i,a,b,k) for(int i=a;i>=b;i-=k)
 #define vi vector<int>
 #define vll vector<long long>
+#define pii pair<int,int>
+#define pll pair<ll,ll>
 #define vpii vector<pair<int,int>>
-#define vsi vector<set<int>>
+#define vpll vector<pll>
 #define vvi vector<vi>
 #define vb vector<bool>
 #define umii unordered_map<int,int>
@@ -97,6 +98,7 @@ int main()
 {
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
+	cout.tie(0);
 	int t;
 	cin>>t;
 	while(t--)
