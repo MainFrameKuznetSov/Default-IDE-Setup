@@ -22,6 +22,7 @@
 #define vvi vector<vi>
 #define vb vector<bool>
 #define umii unordered_map<int,int>
+#define umci unordered_map<char,int>
 using namespace std;
 int BinarySearch(vi x,int t)
 {
