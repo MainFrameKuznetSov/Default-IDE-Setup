@@ -23,6 +23,7 @@
 #define vb vector<bool>
 #define umii unordered_map<int,int>
 #define umci unordered_map<char,int>
+#define umli unordered_map<ll,int>
 using namespace std;
 int BinarySearch(vi x,int t)
 {
